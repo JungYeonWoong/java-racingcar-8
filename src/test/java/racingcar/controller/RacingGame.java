@@ -36,5 +36,6 @@ public class RacingGame {
             int randomNumber = randomNumberGenerator.generateRandomNumber();
             car.move(randomNumber);
         }
+        outputView.printCarPosition(cars);
     }
 }
