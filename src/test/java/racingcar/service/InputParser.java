@@ -12,10 +12,14 @@ public class InputParser {
      * @return 자동차 이름 리스트
      *
      * 각 이름이 5자 이하인지 검증
-     * @throws IllegalArgumentException 이름이 5자를 초과했을 때 발생
+     * @throws IllegalArgumentException 입력값이 비어있거나 이름이 5자를 초과했을 때 발생
      */
     public List<String> parseCarNames(String input) {
         // 쉼표 기준으로 분리 후, 공백 제거
+        if (input == null || input.isBlank()) {
+            throw new IllegalArgumentException("🚫 입력값이 비어 있습니다.");
+        }
+
         List<String> carNames = Arrays.stream(input.split(","))
                 .map(String::trim)
                 .toList();
