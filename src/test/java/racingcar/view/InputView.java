@@ -20,7 +20,7 @@ public class InputView {
      *
      * @return 사용자가 입력한 이동 횟수 문자열
      */
-    public String readRacingCount() {
+    public String readRaceCount() {
         System.out.println("시도할 횟수는 몇 회인가요?");
         String tryCount = Console.readLine();
         return tryCount;
