@@ -6,7 +6,7 @@ import java.util.List;
 public class WinnerCalculator {
 
     /**
-     * 자동차 리스트 중에서 우승자(가장 멀리 간 자동차들)를 찾아 반환합니다.
+     * 자동차 리스트 중에서 우승자(가장 멀리 간 자동차들)를 찾아 반환
      */
     public List<Car> findWinners(List<Car> cars) {
         // 모든 자동차 중 최장 거리 탐색

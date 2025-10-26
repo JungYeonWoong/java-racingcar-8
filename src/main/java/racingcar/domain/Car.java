@@ -46,9 +46,12 @@ public class Car {
         return position == distance;
     }
 
-    /** 이름을 외부에서 출력용으로만 접근 */
-    public String name() {
-        return name;
+    /**
+     * 자동차의 이름을 직접 출력에 활용
+     */
+    public void appendName(StringBuilder sb, boolean isLast) {
+        sb.append(name);
+        if (!isLast) sb.append(",");
     }
 
 }

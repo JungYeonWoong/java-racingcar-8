@@ -12,14 +12,16 @@ public class OutputView {
         }
         System.out.println();
     }
+
     /**
-     * 공동 우승자가 있는 경우 쉼표로 구분하여 출력합니다.
-     * 예: pobi,woni가 최종 우승했습니다.
+     * 공동 우승자가 있는 경우 쉼표로 구분하여 출력
      */
     public void printWinners(List<Car> winners) {
-        String winnerNames = winners.stream()
-                .map(Car::name)
-                .collect(Collectors.joining(","));
-        System.out.println(winnerNames + "가 최종 우승했습니다.");
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < winners.size(); i++) {
+            boolean isLast = (i == winners.size() - 1);
+            winners.get(i).appendName(sb, isLast);
+        }
+        System.out.println("최종 우승자 : " + sb);
     }
 }
