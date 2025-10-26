@@ -27,9 +27,18 @@ public class Car {
         return name + " : " + "-".repeat(position);
     }
 
-    /** 최대 거리 계산 (더 멀면 그 값을 반환) */
+    /**
+     * 현재 자동차의 위치가 주어진 최대 거리보다 멀 경우,
+     * 해당 위치를 반환하고 그렇지 않으면 기존 최대 거리를 반환합니다.
+     *
+     * @param currentMax 현재까지의 최대 거리
+     * @return 더 먼 거리 값
+     */
     public int compareDistance(int currentMax) {
-        return position > currentMax ? position : currentMax;
+        if (position > currentMax) {
+            return position;
+        }
+        return currentMax;
     }
 
     /** 같은 거리인지 비교 */
