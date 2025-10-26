@@ -18,4 +18,13 @@ public class Car {
             position++;
         }
     }
+
+    /**
+     * 자동차의 현재 상태를 문자열로 반환합니다.
+     * 예: "pobi : ---"
+     */
+    public String status() {
+        return name + " : " + "-".repeat(position);
+    }
+
 }
