@@ -27,4 +27,19 @@ public class Car {
         return name + " : " + "-".repeat(position);
     }
 
+    /** 최대 거리 계산 (더 멀면 그 값을 반환) */
+    public int compareDistance(int currentMax) {
+        return position > currentMax ? position : currentMax;
+    }
+
+    /** 같은 거리인지 비교 */
+    public boolean isSameDistance(int distance) {
+        return position == distance;
+    }
+
+    /** 이름을 외부에서 출력용으로만 접근 */
+    public String name() {
+        return name;
+    }
+
 }
