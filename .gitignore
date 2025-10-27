@@ -5,7 +5,7 @@ build/
 !**/src/main/**
 !**/src/test/**
 
-### STS ###
+### 🧱 STS ###
 .apt_generated
 .classpath
 .factorypath
@@ -14,22 +14,75 @@ build/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
+### 💡 IntelliJ IDEA ###
+.idea/
 *.iws
 *.iml
 *.ipr
 out/
 
-### NetBeans ###
+# IntelliJ 캐시 폴더 (추가)
+**/out/
+**/build/
+
+### 🧰 NetBeans ###
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
+### 💻 VS Code ###
 .vscode/
 
-### Mac OS ###
+### 🍎 macOS ###
 .DS_Store
+
+### 🪟 Windows ###
+Thumbs.db
+
+### ⚙️ Java ###
+# Java 컴파일 결과물
+*.class
+
+# 로그 파일
+*.log
+
+# 패키징 결과물 (빌드 시 자동 생성)
+*.jar
+*.war
+*.ear
+
+# 임시 파일
+*.tmp
+*.temp
+
+### ⚡ Gradle 캐시 관련 ###
+.gradle/
+**/.gradle/
+.gradle-cache/
+.gradle/7*/
+.gradle/8*/
+
+# Gradle local build cache
+.gradle-build-cache/
+.gradle/daemon/
+.gradle/vcs-*
+.gradle/notifications/
+
+### 🧪 테스트 관련 ###
+# JUnit, Test Reports, Coverage Results
+test-results/
+reports/
+*.exec
+*.coverage
+*.lcov
+*.hprof
+
+### 🧩 기타 ###
+# OS 혹은 IDE에서 자동 생성되는 파일
+*.swp
+*.bak
+*.old
+*.orig
+v

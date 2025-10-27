@@ -26,7 +26,7 @@ public class Application {
         List<Car> cars = carNames.stream().map(Car::new).toList();
 
         // 시도 횟수 입력
-        String tryCountInput = inputView.readTryCount();
+        String tryCountInput = inputView.readRaceCount();
         int tryCount = validator.validateTryCount(tryCountInput);
 
         // 게임 실행
