@@ -30,6 +30,26 @@
 7️⃣ 테스트 코드 작성
 
 ---
+## 📌 JUnit 5와 AssertJ를 활용하여 테스트하기
+### 🎈 테스트 실행 방법 : `.\gradlew.bat clean test`
+### 🎈 테스트 기능 목록 
+![img.png](img.png)
+
+### 🎈 JUnit 테스트 실행 결과 리포트(HTML 보고서)
+-> gradlew test 명령으로 실행된 테스트 결과를 시각적으로 보여주는 HTML 페이지
+-> Gradle이 JUnit 테스트를 실행할 때 자동으로 생성된다.
+
+프로젝트 루트
+└── build/
+└── reports/
+└── tests/
+└── test/
+└── index.html  ← 이 파일
+
+-> .\gradlew.bat test  이 명령어 실행하면 모든 @Test 메서드 실행하고 결과를 콘솔에 출력하고 동시에 HTML 리포트 파일 생성
+🔑 위의 HTML 리포트를 보고 실패한 테스트를 파악한 후 디버깅을 이용해서, 코드를 수정하였다.
+
+---
 
 ## 📜 좋은 커밋 메시지 작성을 위한 7가지 약속 내용 정리 (English에 최적화)
 
