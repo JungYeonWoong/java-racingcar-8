@@ -6,20 +6,15 @@ import java.util.List;
 public class WinnerCalculator {
 
     /**
-     * 자동차 리스트 중에서 우승자(가장 멀리 간 자동차들)를 찾아 반환
+     * 가장 멀리 간 자동차(들)를 찾아 반환
      */
     public List<Car> findWinners(List<Car> cars) {
-        // 모든 자동차 중 최장 거리 탐색
         int maxDistance = findMaxDistance(cars);
-
-        // 최장 거리와 같은 자동차만 필터링
-        return cars.stream()
-                .filter(car -> car.isSameDistance(maxDistance))
-                .toList();
+        return filterWinnersByDistance(cars, maxDistance);
     }
 
     /**
-     * 가장 멀리 간 자동차의 거리(최대 거리)를 계산합니다.
+     * 자동차 중 가장 멀리 간 거리 계산
      */
     private int findMaxDistance(List<Car> cars) {
         int max = 0;
@@ -27,5 +22,14 @@ public class WinnerCalculator {
             max = car.compareDistance(max);
         }
         return max;
+    }
+
+    /**
+     * 지정된 거리와 동일한 자동차만 필터링
+     */
+    private List<Car> filterWinnersByDistance(List<Car> cars, int maxDistance) {
+        return cars.stream()
+                .filter(car -> car.isSameDistance(maxDistance))
+                .toList();
     }
 }
