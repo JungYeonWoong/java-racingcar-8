@@ -1,6 +1,7 @@
 package racingcar.domain;
 
 public class Car {
+    private static final int MOVE_THRESHOLD = 4;
     private final String name;
     private int position = 0;
 
@@ -10,18 +11,22 @@ public class Car {
 
     /**
      * 0~9 사이 난수를 입력받아, 4 이상이면 전진
-     *
-     * @param randomNumber 난수 값
      */
     public void move(int randomNumber) {
-        if (randomNumber >= 4) {
+        if (canMove(randomNumber)) {
             position++;
         }
     }
 
     /**
-     * 자동차의 현재 상태를 문자열로 반환합니다.
-     * 예: "pobi : ---"
+     * 자동차가 움직일 수 있는지 여부를 판단
+     */
+    private boolean canMove(int randomNumber) {
+        return randomNumber >= MOVE_THRESHOLD;
+    }
+
+    /**
+     * 자동차의 현재 상태를 문자열로 반환
      */
     public String status() {
         return name + " : " + "-".repeat(position);
