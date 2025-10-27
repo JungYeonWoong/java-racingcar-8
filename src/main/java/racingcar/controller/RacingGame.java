@@ -25,6 +25,7 @@ public class RacingGame {
      * 전체 경주를 시작합니다.
      */
     public void start(int tryCount) {
+        System.out.println("\n실행 결과");
         repeatRace(tryCount);
         printWinners();
     }
